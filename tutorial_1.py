@@ -11,7 +11,7 @@ app.permanent_session_lifetime = timedelta(minutes=5)
 db = SQLAlchemy(app)
 
 
-class Users(db.Module):
+class Users(db.Model):
     id = db.Column('id', db.Integer, primary_key=True)
     name = db.Column('name', db.String(100))
     email = db.Column('email', db.String(100))
